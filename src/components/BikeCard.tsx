@@ -1,15 +1,16 @@
 'use client'
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface BikeCardProps {
   name: string;
   model: string;
-  imageUrl: string;
+  bikePic: string;
   status: 'available' | 'not available' | 'maintenance';
 }
 
-export default function BikeCard({ name, model, imageUrl, status }: BikeCardProps) {
+export default function BikeCard({ name, model, bikePic, status }: BikeCardProps) {
   const [showCalendar, setShowCalendar] = useState(false);
 
   const handleBookBike = () => {
@@ -23,7 +24,8 @@ export default function BikeCard({ name, model, imageUrl, status }: BikeCardProp
 
   return (
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4">
-      <img className="w-full h-48 object-cover" src={imageUrl} alt={name} />
+      {/* <img className="w-full h-48 object-cover" src={bikePic} alt={name} />  */}
+      <Image className="w-full h-48 object-cover" src={bikePic} alt="Bike Pic" width={500} height={200}/>
       <div className="p-4">
         <h2 className="text-xl font-bold mb-2">{name}</h2>
         <p className="text-gray-700 mb-4">{model}</p>
@@ -42,9 +44,7 @@ export default function BikeCard({ name, model, imageUrl, status }: BikeCardProp
         <div className="flex justify-between">
           <button
             onClick={handleBookBike}
-            className={`bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded ${
-              status === 'available' ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'
-            }`}
+            className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
             disabled={status !== 'available'}
           >
             Book Bike

@@ -10,7 +10,7 @@ const bikeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    imageUrl: {
+    bikePic: {
       type: String,
       required: true,
     },

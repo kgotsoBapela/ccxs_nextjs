@@ -7,12 +7,14 @@ interface Bike {
   _id: string;
   name: string;
   model: string;
-  imageUrl: string;
+  bikePic: string;
   status: 'available' | 'not available' | 'maintenance';
   __v?: number; // Optional version key from Mongoose
 }
 
+
 export default async function Home() {
+
   await dbConnect();
 
   // Type assertion to match the Bike interface
@@ -33,7 +35,7 @@ export default async function Home() {
               key={bike._id.toString()} // Ensure _id is converted to string for React key
               name={bike.name}
               model={bike.model}
-              imageUrl={bike.imageUrl}
+              bikePic={bike.bikePic}
               status={bike.status}
             />
           ))}

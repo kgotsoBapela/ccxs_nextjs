@@ -20,7 +20,7 @@ export default function SignUp() {
         body: JSON.stringify({ email, password, name }),
       });
       if (res.ok) {
-        const data = await res.json();
+        // const data = await res.json();
         toast.success(`${name}'s account created successfully!`);
         router.push('/auth/signin');
       } else {

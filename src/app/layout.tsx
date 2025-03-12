@@ -1,10 +1,10 @@
 import './globals.css';
-import { Inter, Geist } from 'next/font/google';
+// import { Inter, Geist } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import SessionWrapper from '@/components/SessionWrapper';
 
-const inter = Inter({ subsets: ['latin'] });
-const geistSans = Geist({subsets: ["latin"]});
+// const inter = Inter({ subsets: ['latin'] });
+// const geistSans = Geist({subsets: ["latin"]});
 
 export const metadata = {
   title: 'Community Connect',

@@ -2,8 +2,12 @@ import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import { authOptions } from '@/lib/auth';
 import ProfileForm from '@/components/ProfileForm';
+export const dynamic = "force-dynamic";
+
+// import { headers } from "next/headers";
 
 export default async function Profile() {
+  // const userHeaders = headers();
   try {
     const session = await getServerSession(authOptions);
     if (!session) {
@@ -20,4 +24,5 @@ export default async function Profile() {
     console.error('Error fetching session:', error);
     redirect('/auth/signin');
   }
+  return <div>Profile Page</div>;
 }

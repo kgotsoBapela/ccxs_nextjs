@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
     console.log(`Reset link: /auth/reset?token=${resetToken}`);
     return NextResponse.json({ message: 'If the email exists, a reset link has been sent.' });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: 'Error requesting reset' }, { status: 500 });
   }
 }
