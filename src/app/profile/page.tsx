@@ -4,10 +4,8 @@ import { authOptions } from '@/lib/auth';
 import ProfileForm from '@/components/ProfileForm';
 export const dynamic = "force-dynamic";
 
-// import { headers } from "next/headers";
-
 export default async function Profile() {
-  // const userHeaders = headers();
+ 
   try {
     const session = await getServerSession(authOptions);
     if (!session) {

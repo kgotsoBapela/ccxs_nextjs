@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/reset/request/page", "src/app/auth/reset/file", "src/app/auth/reset/request/file"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/reset/request/page", "src/app/auth/reset/file", "src/app/auth/reset/request/file", "src/app/admin/bikes/[id]/route"],
   "exclude": ["node_modules"]
 }

@@ -1,12 +1,12 @@
 export default function About() {
     return (
       <div className="max-w-4xl mx-auto mt-10 px-4">
-        <h1 className="text-4xl font-bold text-center mb-6">About CCxS</h1>
-        <p className="text-lg text-gray-700 mb-4">
-          CCxS is a modern web application designed to provide users with a seamless experience for managing their profiles and accessing role-based features. Built with Next.js and powered by MongoDB, CCxS offers robust authentication, user management, and a responsive design.
+        <h2 className="text-4xl font-bold text-center mb-6">Community Connect</h2>
+        <p className="text-lg mb-4">
+        Bringing People Together on Two Wheels - Bicycle collective of South Africa..
         </p>
-        <p className="text-lg text-gray-700 mb-4">
-          Whether you’re a regular user or an admin, CCxS ensures secure access to your data with role-based access control. Explore our features, including profile editing, password reset, and more, all wrapped in a clean and intuitive interface.
+        <p className="text-lg mb-4">
+        Community Connect, a network where bikes could be freely shared, opening up South Africa’s rugged landscapes to people of all backgrounds. The mission was simple yet powerful—to bring people together and expand their world, one ride at a time.
         </p>
         <div className="mt-6 text-center">
           <a href="/contact" className="text-blue-500 hover:underline">

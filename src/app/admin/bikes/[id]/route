@@ -1,0 +1,14 @@
+// import { NextResponse } from 'next/server';
+// import dbConnect from '@/lib/dbConnect';
+// import Bike from '@/models/Bike';
+
+// export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+//   await dbConnect();
+//   const bike = await Bike.findByIdAndDelete(params.id);
+
+//   if (!bike) {
+//     return NextResponse.json({ message: 'Bike not found' }, { status: 404 });
+//   }
+
+//   return NextResponse.json({ message: 'Bike deleted successfully' }, { status: 200 });
+// }
